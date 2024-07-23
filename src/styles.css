@@ -45,7 +45,7 @@ body {
     
 }
 .Search-input-city {
-    font-size: 36PX;
+    font-size: 38PX;
     line-height: 45px;
     margin-bottom: 5px;
 }
@@ -59,11 +59,32 @@ body {
     color: rgba(215, 18, 241, 0.5);
 
 } 
+.city-temp-details {
+    display: flex;
+    justify-content: space-between;
+    line-height: 90px ;
+}
+.temp-icon {
+    font-size: 65px;
+    margin-top: 25px;
+    width: 70px;
+    height:70px ;
+}
+.temp-number {
+    font-size: 80px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.temp-unit {
+    font-size: 25px;
+    margin: 0px;
+}
 footer {
     border-top: 1px solid #f3fdfb;
     padding-top: 30px;
     font-size: small;
     color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 a {
     color: #08c4a4;
