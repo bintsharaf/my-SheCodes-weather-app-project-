@@ -44,6 +44,21 @@ body {
     
     
 }
+.Search-input-city {
+    font-size: 36PX;
+    line-height: 45px;
+    margin-bottom: 5px;
+}
+.Search-input-city-info {
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 23px;
+    font-size: 15px;
+    
+}
+.Search-input-city-info strong {
+    color: rgba(215, 18, 241, 0.5);
+
+} 
 footer {
     border-top: 1px solid #f3fdfb;
     padding-top: 30px;
