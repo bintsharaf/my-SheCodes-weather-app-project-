@@ -9,9 +9,9 @@ function updateWeatherInfo(response) {
 
 }
 function linkCity(city) {
-  let  apiKey = "29583e5b03o3adtc2486edaf9f3af0e3"
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
-  axios.get(apiUrl).then(updateWeatherInfo);
+    let  apiKey = "29583e5b03o3adtc2486edaf9f3af0e3"
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
+    axios.get(apiUrl).then(updateWeatherInfo);
   }
 
 function onClickForm(event) {
@@ -23,5 +23,6 @@ function onClickForm(event) {
 
 let formElement = document.querySelector("#Search-form");
 formElement.addEventListener("submit", onClickForm); 
-linkCity(lisbon);
+
+linkCity("Paris");
 
