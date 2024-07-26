@@ -7,8 +7,10 @@ function updateWeatherInfo(response) {
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind"); 
     let timeElement = document.querySelector("#time");
-    let date = new Date(response.data.time * 1000);  
+    let date = new Date(response.data.time * 1000); 
+    let iconElement = document.querySelector("#icon"); 
     console.log(date);
+    console.log(response.data.condition.icon_url);
 
     temperatureElement.innerHTML = temperature;
     searchCityElement.innerHTML = response.data.city;
@@ -17,6 +19,7 @@ function updateWeatherInfo(response) {
     windElement.innerHTML = `${response.data.wind.speed}km/h`;
     //created a function to display the real day 
     timeElement.innerHTML = formartDate(date);
+    iconElement.innerHTML = `<img src= ${response.data.condition.icon_url}  class="temp-icon ">`
 }
 function formartDate(date) {
     
