@@ -1,9 +1,11 @@
 function updateWeatherInfo(response) {
     
-    let currentTemp = document.querySelector("#temp-number");
+    let temperatureElement = document.querySelector("#temp-number");
     let temperature = Math.round(response.data.temperature.current);
     console.log(response.data.temperature.current);
-    
+    temperatureElement.innerHTML = temperature;
+    let searchCityElement = document.querySelector("#Search-input-city");
+    searchCityElement.innerHTML = response.data.city;
 
 }
 function linkCity(city) {
@@ -15,12 +17,11 @@ function linkCity(city) {
 function onClickForm(event) {
     event.preventDefault();
     let searchInputElement = document.querySelector("#Search-input-text");
-    let searchCityElement = document.querySelector("#Search-input-city");
-    searchCityElement.innerHTML = searchInputElement.value;
+    
     linkCity(searchInputElement.value);
 }
 
 let formElement = document.querySelector("#Search-form");
 formElement.addEventListener("submit", onClickForm); 
-
+linkCity(lisbon);
 
